@@ -13,8 +13,8 @@ export default function Home() {
                 <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
                     <div className="lg:w-1/2 w-full space-y-8">
                         <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900">
-                            Chăm Sóc Y Tế <br />
-                            <span className="text-red-700">Chăm Sóc Y Tế</span> Tốt Nhất <br />
+                            PHÒNG KHÁM TÂM THỊNH <br />
+                            <span className="text-red-700">CHĂM SÓC CHẤN THƯƠNG XƯƠNG KHỚP</span> Tốt Nhất <br />
                             Sức Khỏe Tốt Nhất.
                         </h1>
                         <p className="text-slate-500 text-lg leading-relaxed max-w-md">
