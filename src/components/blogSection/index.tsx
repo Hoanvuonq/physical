@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
 
-// Dữ liệu mẫu (Data giả lập)
 const BLOGS = [
     {
         id: 1,
@@ -27,7 +26,7 @@ const BLOGS = [
 
 const BlogSection = () => {
     return (
-        <section className="bg-white py-20">
+        <section id="blog" className="bg-white py-20">
             <div className="container mx-auto px-6">
 
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -59,7 +58,6 @@ const BlogSection = () => {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                             </div>
-
                             <div className="space-y-2">
                                 <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
                                     {post.tag}

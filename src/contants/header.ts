@@ -1,22 +1,22 @@
 export const HEADER_LINKS = [
   {
     label: "Trang Chủ",
-    href: "/",
+    href: "#",
   },
   {
     label: "Giới Thiệu",
-    href: "/about",
+    href: "#about",
   },
   {
     label: "Dịch Vụ",
-    href: "/services",
+    href: "#services",
   },
   {
     label: "Liên Hệ",
-    href: "/contact",
+    href: "#contact",
   },
   {
     label: "Bài Viết",
-    href: "/blog",
+    href: "#blog",
   },
 ];

@@ -17,7 +17,6 @@ const Template = ({ children }: ITemplateProps) => {
             <main className="flex-1 w-full pt-20">
                 {children}
             </main>
-
             <Footer />
         </div>
     );

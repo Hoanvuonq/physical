@@ -1,21 +1,21 @@
-import Image from "next/image";
-import { ArrowRight, MoveRight, Star } from "lucide-react";
-import Link from "next/link";
-import { ServiceSection } from "@/components/serviceSection";
-import WhyChooseUs from "@/components/whyChooseUs";
-import TestimonialSection from "@/components/testimonialSection";
 import BlogSection from "@/components/blogSection";
+import { ServiceSection } from "@/components/serviceSection";
+import TestimonialSection from "@/components/testimonialSection";
+import WhyChooseUs from "@/components/whyChooseUs";
+import { MoveRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
     return (
         <main className="min-h-screen bg-white text-slate-900">
-            <section className="container mx-auto px-6 pt-[4vw]">
+            <section id="home" className="container mx-auto px-6 pt-[4vw]">
                 <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
-                    <div className="lg:w-1/2 w-full space-y-8">
-                        <h1 className="text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900">
+                    <div className="lg:w-1/2 w-full space-y-10">
+                        <h1 className="text-5xl lg:text-7xl font-bold leading-[1.2] tracking-tight text-slate-900">
                             PHÒNG KHÁM TÂM THỊNH <br />
-                            <span className="text-red-700">CHĂM SÓC CHẤN THƯƠNG XƯƠNG KHỚP</span> Tốt Nhất <br />
-                            Sức Khỏe Tốt Nhất.
+                            <span className="text-red-700">CHĂM SÓC CƠ XƯƠNG KHỚP TỐT NHẤT</span>  <br />
+                            CHO BẠN SỨC KHỎE TỐT NHẤT.
                         </h1>
                         <p className="text-slate-500 text-lg leading-relaxed max-w-md">
                             Một bác sĩ chấn thương xương khớp xử lý các rối loạn xương khớp bằng cách tập trung vào việc điều chỉnh xương khớp, nhằm nâng cao sức khỏe tổng thể và giảm đau tự nhiên.
@@ -63,7 +63,7 @@ export default function Home() {
                     </div>
 
                     <div className="flex justify-center">
-                        <div className="relative w-48 h-48 rounded-2xl overflow-hidden bg-slate-200">
+                        <div className="relative w-52 h-64 rounded-2xl overflow-hidden bg-slate-200">
                             <Image
                                 src="/images/news/new02.png"
                                 alt="Happy patient"
@@ -86,7 +86,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="bg-slate-50 py-20 lg:py-28">
+            <section id="about" className="bg-slate-50 py-20 lg:py-28">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
 

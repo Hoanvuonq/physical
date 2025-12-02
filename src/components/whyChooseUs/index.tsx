@@ -5,85 +5,114 @@ import { Sparkles, CheckCircle2 } from "lucide-react";
 const REASONS = [
     {
         title: "Kế Hoạch Chăm Sóc Cá Nhân Hóa",
-        desc: "Bác sĩ chấn thương xương khớp nhận thức thời gian để hiểu nhu cầu cụ thể của bạn để giải quyết các điểm đau đặc biệt và mục tiêu sức khỏe của bạn.",
+        desc: "Bác sĩ chấn thương xương khớp dành thời gian để hiểu nhu cầu cụ thể của bạn để giải quyết các điểm đau đặc biệt và mục tiêu sức khỏe.",
     },
     {
-        title: "Phương Pháp Tự Nhiên, Không Xâm Nhập",
-        desc: "Chúng tôi sử dụng kỹ thuật mềm mại, tay nghề để giảm đau, nâng cao chức năng khớp và khôi phục sự cân bằng mà không cần phẫu thuật hoặc thuốc.",
+        title: "Phương Pháp Tự Nhiên, Không Xâm Lấn",
+        desc: "Sử dụng kỹ thuật nắn chỉnh nhẹ nhàng để giảm đau, nâng cao chức năng khớp và khôi phục sự cân bằng mà không cần phẫu thuật.",
     },
     {
-        title: "Chuyên Gia Có Kinh Nghiệm",
-        desc: "Đội ngũ bác sĩ chấn thương xương khớp có tay nghề cao đã giúp hàng ngàn bệnh nhân tìm thấy sự giảm đau và sống khỏe hơn, hoạt động nhiều hơn.",
+        title: "Chuyên Gia Giàu Kinh Nghiệm",
+        desc: "Đội ngũ bác sĩ tay nghề cao đã giúp hàng ngàn bệnh nhân tìm thấy sự giảm đau và quay lại cuộc sống năng động.",
     },
     {
         title: "Chăm Sóc Toàn Diện",
-        desc: "Từ điều chỉnh xương khớp và tập thể dục thuốc, đến tư vấn dinh dưỡng và lời khuyên về sinh hoạt, chúng tôi cung cấp một phương pháp toàn diện.",
+        desc: "Từ điều chỉnh xương khớp, tập phục hồi chức năng đến tư vấn dinh dưỡng, chúng tôi cung cấp giải pháp sức khỏe trọn vẹn.",
     },
 ];
 
 const WhyChooseUs = () => {
     return (
-        <section className="bg-white pt-20">
-            {/* --- CONTAINER CHO PHẦN TEXT Ở TRÊN --- */}
-            <div className="container mx-auto px-6 mb-16">
-                <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
-                    <div className="lg:col-span-5 space-y-4">
-                        <div className="flex items-center gap-2 text-red-600 font-bold text-sm uppercase tracking-wide">
-                            <Sparkles size={18} className="fill-red-600" />
-                            <span>Giới Thiệu</span>
-                        </div>
-                        <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.2]">
-                            Lý Do <br /> Tại Sao Chọn Chúng Tôi <br /> Chăm Sóc Chấn Thương Xương Khớp
-                        </h2>
+        <section id="why-choose-us" className="bg-white pt-20">
+            {/* --- CONTAINER CHÍNH --- */}
+            <div className="container mx-auto px-6 mb-20">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                    <div className="relative h-full min-h-[500px] lg:h-[900px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl group">
+                        <video
+                            className="object-cover w-full h-full"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                        >
+                            <source src="/images/service/videos.mp4" type="video/mp4" />
+                            Trình duyệt của bạn không hỗ trợ thẻ video.
+                        </video>
+
+                        {/* Lớp phủ nhẹ để video không quá chói so với nền trắng */}
+                        <div className="absolute inset-0 bg-black/10" />
+
+
                     </div>
-                    <div className="lg:col-span-7 grid gap-8">
-                        {REASONS.map((item, index) => (
-                            <div key={index} className="flex gap-4">
-                                <div className="shrink-0 pt-1">
-                                    <CheckCircle2 size={24} className="text-red-500 fill-red-50" />
-                                </div>
-                                <div>
-                                    <h4 className="text-lg font-bold text-slate-900 mb-2">
-                                        {item.title}
-                                    </h4>
-                                    <p className="text-slate-500 leading-relaxed text-sm md:text-base">
-                                        {item.desc}
-                                    </p>
-                                </div>
+
+                    <div className="spa,ce-y-10">
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-2 text-red-600 font-bold text-sm uppercase tracking-wide">
+                                <Sparkles size={18} className="fill-red-600" />
+                                <span>Về Chúng Tôi</span>
                             </div>
-                        ))}
+                            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-[1.2]">
+                                Tại Sao Chọn <br /> <span className="text-red-700">Phòng Khám Tâm Thịnh?</span>
+                            </h2>
+                            <p className="text-slate-500 text-lg">
+                                Chúng tôi kết hợp y học hiện đại và sự thấu cảm để mang lại kết quả điều trị tốt nhất cho từng bệnh nhân.
+                            </p>
+                        </div>
+
+                        <div className="grid gap-6">
+                            {REASONS.map((item, index) => (
+                                <div key={index} className="flex gap-4 p-4 cursor-pointer rounded-xl hover:bg-slate-50 transition-colors duration-300 border border-transparent hover:border-slate-100">
+                                    <div className="shrink-0 pt-1">
+                                        <div className="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                                            <CheckCircle2 size={20} />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-lg font-bold text-slate-900 mb-2">
+                                            {item.title}
+                                        </h4>
+                                        <p className="text-slate-500 leading-relaxed text-sm md:text-base">
+                                            {item.desc}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
+
                 </div>
             </div>
-            {/* --- ĐÃ ĐÓNG CONTAINER Ở ĐÂY --- */}
 
-
-            {/* --- HÌNH ẢNH FULL MÀN HÌNH (Nằm ngoài container) --- */}
-            {/* Sử dụng w-full vì section cha đã full width rồi. Thêm rounded-t-3xl nếu muốn bo góc trên */}
+            {/* --- HÌNH ẢNH FULL MÀN HÌNH (GIỮ NGUYÊN) --- */}
             <div className="relative w-full h-[300px] md:h-[500px] lg:h-[800px] overflow-hidden">
                 <Image
                     src="/images/news/111.png"
                     alt="Chiropractic treatment session"
                     fill
-                    // QUAN TRỌNG: Đổi object-contain thành object-cover để lấp đầy
                     className="object-cover object-top"
                 />
             </div>
 
+            {/* --- BANNER CTA --- */}
+            <div className="bg-[#e41212] py-20 text-center text-white relative overflow-hidden">
+                {/* Họa tiết nền mờ */}
+                <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-[100px]" />
+                    <div className="absolute bottom-10 right-10 w-64 h-64 bg-white rounded-full blur-[100px]" />
+                </div>
 
-            {/* --- BANNER MÀU ĐỎ BÊN DƯỚI --- */}
-            <div className="bg-[#e41212] py-16 text-center text-white">
-                <div className="container mx-auto px-6 space-y-6">
-                    <h3 className="text-3xl lg:text-4xl font-bold">
-                        Sẵn Sàng Bắt Đầu Chuyến Đi Của Bạn Đến <br className="hidden md:block" />
-                        Sức Khỏe Tốt Hơn?
+                <div className="container mx-auto px-6 space-y-8 relative z-10">
+                    <h3 className="text-3xl lg:text-5xl font-bold leading-tight">
+                        Sẵn Sàng Bắt Đầu Hành Trình <br className="hidden md:block" />
+                        Phục Hồi Sức Khỏe?
                     </h3>
-                    <p className="text-blue-100 text-lg">
-                        Đặt Lịch Hẹn Miễn Phí Ngay Hôm Nay!
+                    <p className="text-red-100 text-lg max-w-2xl mx-auto">
+                        Đừng để cơn đau cản trở cuộc sống của bạn. Hãy để Tâm Thịnh đồng hành cùng bạn trên con đường tìm lại sự dẻo dai.
                     </p>
                     <div className="pt-4">
-                        <button className="bg-[#e41212] hover:bg-[#c41010] text-white font-bold py-4 px-10 rounded-full transition-all shadow-[0_0_20px_rgba(0,229,190,0.4)] hover:scale-105 border border-white/20">
-                            Đặt Lịch Hẹn
+                        <button className="bg-white text-[#e41212] font-bold py-4 px-12 rounded-full transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 hover:bg-slate-50">
+                            Đặt Lịch Khám Ngay
                         </button>
                     </div>
                 </div>

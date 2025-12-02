@@ -6,6 +6,10 @@
   --foreground: #171717;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 
 @theme inline {
