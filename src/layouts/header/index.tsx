@@ -56,7 +56,7 @@ const Header = () => {
                         <Button
                             label="Liên Hệ"
                             onClick={() => { }}
-                            className="px-6 py-2 rounded-full border border-slate-900 bg-transparent text-slate-900 hover:bg-[#e41212] hover:border-[#e41212] hover:text-white transition-all font-bold"
+                            className="px-6 py-2 cursor-pointer rounded-full border border-slate-900 bg-transparent text-slate-900 hover:bg-[#e41212] hover:border-[#e41212] hover:text-white transition-all font-bold"
                         />
                     </div>
 

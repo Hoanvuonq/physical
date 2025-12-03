@@ -4,33 +4,33 @@ import { Sparkles, MoveRight } from "lucide-react";
 
 const SERVICES = [
     {
-        title: "Máy Từ Trường Siêu Dẫn",
-        desc: "Sử dụng trường điện từ cường độ cao thâm nhập sâu vào mô cơ, giúp giảm đau thần tốc, kháng viêm mạnh mẽ và thúc đẩy quá trình liền xương, phục hồi tế bào tổn thương.",
+        title: "Máy Từ Trường Siêu Dẫn ",
+        desc: "Sử dụng trường điện từ cường độ cao thâm nhập sâu, máy giúp **giảm đau thần kinh, kháng viêm cấp tính** và **thúc đẩy quá trình liền xương** nhanh chóng, tối ưu hóa phục hồi chức năng và tái tạo tế bào tổn thương.",
         image: "/images/service/1.png",
     },
     {
-        title: "Sóng Xung Kích Shockwave",
-        desc: "Công nghệ sóng âm năng lượng cao phá vỡ các điểm vôi hóa và dải cơ co thắt, kích thích tái tạo mạch máu, đặc biệt hiệu quả cho gai gót chân, viêm gân và đau điểm kích hoạt.",
+        title: "Công Nghệ Sóng Xung Kích ",
+        desc: "Công nghệ sóng âm năng lượng cao không xâm lấn, hiệu quả đột phá trong việc **phá vỡ các điểm vôi hóa** và **giải tỏa dải cơ co thắt**. Đặc biệt hiệu quả điều trị gai gót chân, viêm gân mạn tính và hội chứng đau điểm kích hoạt.",
         image: "/images/service/2.png",
     },
     {
-        title: "Máy Siêu Âm Trị Liệu",
-        desc: "Tác động nhiệt sâu và vi massage giúp giãn cơ, tăng tuần hoàn máu cục bộ, làm mềm mô sẹo và giảm viêm sưng cấp tính cho các vùng khớp gối, lưng và cổ vai gáy.",
+        title: "Máy Siêu Âm Trị Liệu ",
+        desc: "Tạo ra tác động nhiệt sâu và vi massage cấp độ tế bào, giúp **giãn cơ, tăng cường tuần hoàn máu cục bộ**, làm mềm mô sẹo. Giải pháp lý tưởng để giảm viêm sưng và đau cho các vùng khớp gối, vai gáy, và cột sống.",
         image: "/images/service/3.png",
     },
     {
-        title: "Massage Thư Giãn Cơ",
-        desc: "Kỹ thuật xoa bóp trị liệu chuyên sâu kết hợp ấn huyệt giúp giải tỏa căng thẳng cơ bắp, tăng cường lưu thông khí huyết và giảm đau mỏi vai gáy do stress hoặc sai tư thế.",
+        title: "Giải Cơ Trị Liệu Chuyên Sâu",
+        desc: "Kỹ thuật giải cơ và ấn huyệt chuyên sâu được thực hiện bởi chuyên viên trị liệu. Giúp **giải tỏa căng thẳng cơ bắp sâu**, khôi phục tính linh hoạt và **tăng cường lưu thông khí huyết**, giảm đau mỏi do sai tư thế, stress.",
         image: "/images/service/4.png",
     },
     {
-        title: "Phục Hồi Chức Năng Tai Biến",
-        desc: "Phác đồ tập luyện cá nhân hóa giúp bệnh nhân sau đột quỵ tái lập các cử động chức năng, ngăn ngừa teo cơ cứng khớp và sớm quay trở lại cuộc sống sinh hoạt thường ngày.",
+        title: "Phục Hồi Chức Năng Thần Kinh (Sau Đột Quỵ)",
+        desc: "Phác đồ tập luyện cá nhân hóa, kết hợp thiết bị hỗ trợ chuyên biệt, giúp bệnh nhân sau đột quỵ **tái lập các cử động chức năng**, ngăn ngừa teo cơ cứng khớp và **sớm quay trở lại cuộc sống sinh hoạt thường ngày**.",
         image: "/images/service/5.png",
     },
     {
-        title: "Hệ Thống Tập Phục Hồi",
-        desc: "Các dòng máy tập vận động chủ động và thụ động giúp bệnh nhân lấy lại biên độ khớp và sức mạnh cơ bắp sau chấn thương hoặc phẫu thuật.",
+        title: "Hệ Thống Tập Vận Động Phục Hồi",
+        desc: "Sử dụng các dòng máy tập **vận động chủ động và thụ động** tiên tiến để phục hồi biên độ khớp và sức mạnh cơ bắp. Đây là bước then chốt sau chấn thương, phẫu thuật hoặc để duy trì vận động tối ưu cho người lớn tuổi.",
         image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800",
     },
 ];
@@ -43,20 +43,20 @@ export const ServiceSection = () => {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2 text-red-600 font-bold text-sm uppercase tracking-wide">
                             <Sparkles size={18} className="fill-red-600" />
-                            <span>Công Nghệ Điều Trị</span>
+                            <span>Công Nghệ Điều Trị Tận Gốc</span>
                         </div>
 
                         <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight max-w-2xl">
-                            HỆ THỐNG MÁY MÓC <br />
-                            <span className="text-red-700">HIỆN ĐẠI BẬC NHẤT</span>
+                            DẪN ĐẦU VỀ THIẾT BỊ <br />
+                            <span className="text-red-700">VẬT LÝ TRỊ LIỆU BẬC NHẤT</span>
                         </h2>
                         <p className="text-slate-500 max-w-lg">
-                            Chúng tôi trang bị những công nghệ tiên tiến nhất từ Châu Âu để rút ngắn thời gian phục hồi và nâng cao hiệu quả điều trị.
+                            Chúng tôi trang bị những công nghệ tiên tiến nhất từ Châu Âu và Mỹ để **rút ngắn thời gian phục hồi** và mang lại **hiệu quả điều trị bền vững** cho mọi vấn đề cơ xương khớp.
                         </p>
                     </div>
 
                     <button className="group flex items-center gap-2 bg-slate-900 hover:bg-[#e41212] text-white font-bold py-3 px-8 rounded-full transition-all shadow-md shrink-0">
-                        Xem Chi Tiết <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        Tìm Hiểu Chi Tiết <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>
 
@@ -70,7 +70,7 @@ export const ServiceSection = () => {
                     {SERVICES.map((item, index) => (
                         <div
                             key={index}
-                            className="min-w-[340px] md:min-w-[420px] snap-start group cursor-pointer"
+                            className="min-w-full md:min-w-[420px] snap-start group cursor-pointer"
                         >
                             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-slate-100 shadow-sm group-hover:shadow-xl transition-all duration-300">
                                 <Image
