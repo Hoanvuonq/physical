@@ -225,7 +225,7 @@ const WhyChooseUs = () => {
                             loop
                             autoPlay // Tự động chạy khi tải component
                         >
-                            <source src="/images/service/videos1.mp4" type="video/mp4" />
+                            <source src="/images/service/videos.mp4" type="video/mp4" />
                             Trình duyệt của bạn không hỗ trợ thẻ video.
                         </video>
                         <div className="absolute inset-0 bg-black/10 pointer-events-none" />
