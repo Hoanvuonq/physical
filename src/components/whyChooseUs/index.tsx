@@ -7,23 +7,21 @@ import { useState, useRef, useEffect } from "react";
 const INTERACTION_POINTS = [
     {
         id: 1,
-        title: "PHÂN TÍCH CỔ/VAI GÁY (C5-C7)",
+        title: "PHÂN TÍCH CỔ/VAI GÁY (C2-C7)",
         desc: "Hệ thống AI cảnh báo căng cơ thang và đốt sống C5-C7. Nguyên nhân thường do sai tư thế ngồi. Cần giải cơ chuyên sâu để khôi phục biên độ vận động.",
         Icon: Activity,
-        // VỊ TRÍ 1: Cổ/Vai (Trên cùng bên trái)
         position: { top: '25%', left: '15%' }
     },
     {
         id: 2,
-        title: "ĐAU LƯNG GIỮA (Đốt T7-T12)",
+        title: "ĐAU LƯNG GIỮA (Đốt T1-T12)",
         desc: "Đau mỏi vùng lưng giữa, có thể liên quan đến vấn đề phổi hoặc thoát vị đĩa đệm lưng trên. Cần chụp X-quang để xác định chính xác.",
         Icon: Zap,
-        // VỊ TRÍ 2: Lưng giữa (Giữa bên phải)
         position: { top: '45%', right: '18%' }
     },
     {
         id: 3,
-        title: "ĐAU LƯNG DƯỚI (L4-S1)",
+        title: "ĐAU LƯNG DƯỚI (L1-S1)",
         desc: "Rủi ro chèn ép L4-L5 hoặc S1 gây đau thần kinh tọa. Thoái hóa, thoát vị đĩa đệm là nguyên nhân phổ biến. Điều chỉnh cột sống là cần thiết.",
         Icon: ArrowDown,
         position: { bottom: '20%', left: '20%' }
