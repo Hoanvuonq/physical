@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Sparkles } from "lucide-react";
+import { Button } from "../button";
 
 const BLOGS = [
     {
@@ -41,16 +42,14 @@ const BlogSection = () => {
                     </div>
 
                     <Link href="/blog">
-                        <button className="bg-[#e41212] hover:bg-[#c41010] text-white font-bold py-3 px-8 rounded-full transition-all shadow-md">
-                            Xem tất cả
-                        </button>
+                        <Button label="Xem tất cả" variant="primary" className="py-3 px-8" />
                     </Link>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {BLOGS.map((post) => (
                         <div key={post.id} className="group cursor-pointer">
-                            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-slate-100">
+                            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-5 ">
                                 <Image
                                     src={post.image}
                                     alt={post.title}

@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import { Button } from '../button'
 
 const About = () => {
     return (
@@ -31,9 +32,8 @@ const About = () => {
                             chúng tôi giúp bạn không chỉ giảm đau mà còn
                             một cách bền vững.
                         </p>
-                        <button className="bg-[#e41212] hover:bg-[#c41010] text-white font-bold py-3 px-8 rounded-full transition-all mt-4">
-                            Tìm Hiểu Thêm Về Chúng Tôi
-                        </button>
+
+                        <Button label="Tìm Hiểu Thêm Về Chúng Tôi" variant="primary" />
                     </div>
 
                 </div>

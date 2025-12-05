@@ -1,39 +1,66 @@
 'use client'
 import { cn } from '@/utils/cn';
 import React from 'react'
+import { MoveRight } from 'lucide-react'; // Assuming you have the 'lucide-react' icon library installed
+
+// 1. Define the possible button variants
+type ButtonVariant = "default" | "primary" | "secondary";
 
 interface IButtonProps {
     label: string;
-    onClick?: () => void; // Nên để optional (?)
+    onClick?: () => void;
     className?: string;
-    type?: "button" | "submit" | "reset"; // Thêm prop type để dùng trong form nếu cần
+    type?: "button" | "submit" | "reset";
+    icon?: React.ReactNode;
+    variant?: ButtonVariant;
 }
 
-export const Button = ({ label, onClick, className, type = "button" }: IButtonProps) => {
+export const Button = ({
+    label,
+    onClick,
+    className,
+    type = "button",
+    icon,
+    variant = "default"
+}: IButtonProps) => {
+
+    const baseClasses = cn(
+        "group flex items-center justify-center gap-2",
+        "py-3 px-6 rounded-full cursor-pointer",
+        "transition-all duration-300",
+        "text-sm font-bold md:text-base",
+        className
+    );
+
+    const variantClasses = {
+        default: cn(
+            "border-2 border-slate-900 text-slate-900 bg-transparent",
+            "hover:bg-[#e41212] hover:text-white"
+        ),
+
+        primary: cn(
+            "bg-[#e41212] hover:bg-[#c41010] text-white",
+            "shadow-lg shadow-teal-100/50"
+        ),
+
+        secondary: cn(
+            "bg-[#e41212] hover:bg-[#c41010] text-white",
+            "shadow-md shrink-0"
+        ),
+    };
+
     return (
         <button
             type={type}
             onClick={onClick}
-            className={cn(
-                // 1. Layout & Spacing cơ bản (Mobile First)
-                "flex items-center justify-center gap-2",
-                "px-6 py-2 rounded-full",
-
-                // 2. Style màu sắc & Viền (Mặc định)
-                "border-2 border-slate-900 text-slate-900 bg-transparent",
-                "transition-all duration-300", // Hiệu ứng mượt
-                "hover:bg-slate-900 hover:text-white", // Hover đổi màu
-
-                // 3. Typography (Responsive)
-                "text-sm font-bold", // Mobile: chữ 14px
-                "md:text-base",      // Desktop (md trở lên): chữ 16px
-
-                // 4. Custom Class (Ghi đè nếu cần)
-                className
-            )}
+            className={cn(baseClasses, variantClasses[variant])}
         >
-            {/* Bỏ span bao ngoài hoặc giữ lại nhưng không set cứng size nữa */}
             <span>{label}</span>
+            {icon && (
+                <span className="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                    {icon}
+                </span>
+            )}
         </button >
     )
 }

@@ -8,6 +8,7 @@ import TestimonialSection from "@/components/TestimonialSections";
 import WhyChooseUs from "@/components/whyChooseUs";
 import { MoveRight } from "lucide-react";
 import ReviewComponents from "@/components/reviewComponents";
+import { Button } from "@/components";
 
 
 export default function Home() {
@@ -25,9 +26,7 @@ export default function Home() {
                             <span className="font-bold text-black text-xl">Phòng Khám VLTL Tâm Thịnh</span> là nơi các chuyên gia Chấn thương chỉnh hình và Xương khớp cung cấp các giải pháp tự nhiên, không xâm lấn. Chúng tôi tập trung điều chỉnh cột sống để giải phóng cơn đau và nâng cao khả năng vận động, giúp bạn tận hưởng trọn vẹn từng khoảnh khắc.
                         </p>
 
-                        <button className="bg-[#e41212] hover:bg-[#c41010] text-white font-bold py-4 px-8 rounded-full transition-all shadow-lg shadow-teal-100">
-                            Đặt Lịch Hẹn Tư Vấn
-                        </button>
+                        <Button label="Đặt Lịch Hẹn Tư Vấn" variant="primary" className="py-4 px-8" />
                     </div>
                     <div className="lg:w-1/2 w-full relative">
                         <div className="relative rounded-[1vw] overflow-hidden bg-slate-100 aspect-[4/5] lg:aspect-square">
@@ -46,7 +45,7 @@ export default function Home() {
             <section className="container mx-auto px-6 py-12">
                 <div className="grid grid-cols-1 xl:text-left text-center md:grid-cols-3 xl:gap-1 gap-6 items-center border-y border-slate-100 py-12">
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold">Hành Trình Giảm Đau, Tăng Chất Lượng Sống</h3>
+                        <h2 className="text-2xl font-bold">Hành Trình Giảm Đau, Tăng Chất Lượng Sống</h2>
                         <p className="text-slate-500 text-sm">
                             Đừng để cơn đau cản trở bạn. Hơn 1000 khách hàng đã tìm lại sự thoải mái và chất lượng cuộc sống tốt hơn tại Tâm Thịnh. Chúng tôi tự hào là đối tác sức khỏe đáng tin cậy của bạn.
                         </p>

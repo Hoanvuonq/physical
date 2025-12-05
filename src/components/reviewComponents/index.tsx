@@ -2,6 +2,7 @@
 import ReviewCard from "../reviewCard";
 import { Sparkles, MoveRight } from "lucide-react";
 import { REVIEWS_DATA } from "@/contants/review";
+import { Button } from "../button";
 
 const ReviewComponents = () => {
     const mapsUrl = "https://maps.app.goo.gl/i3aCMszkvtEPtbuS8";
@@ -49,9 +50,7 @@ const ReviewComponents = () => {
                             <p className="text-slate-600 mb-6">
                                 Khám phá toàn bộ phản hồi của khách hàng trên Google Maps.
                             </p>
-                            <button className="group flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition-all shadow-md">
-                                Xem thêm trên Maps <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            <Button label="Xem thêm trên Maps" variant="secondary" icon={<MoveRight />} />
                         </a>
                     </div>
                 </div>

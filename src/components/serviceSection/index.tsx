@@ -1,39 +1,47 @@
-"use client";
+'use client'
 import Image from "next/image";
 import { Sparkles, MoveRight } from "lucide-react";
-
+import { Button } from "../button";
 const SERVICES = [
     {
         title: "Máy Từ Trường Siêu Dẫn ",
-        desc: "Sử dụng trường điện từ cường độ cao thâm nhập sâu, máy giúp **giảm đau thần kinh, kháng viêm cấp tính** và **thúc đẩy quá trình liền xương** nhanh chóng, tối ưu hóa phục hồi chức năng và tái tạo tế bào tổn thương.",
+        // Chữ đỏ/in đậm cũ (span) => Chữ đỏ/in đậm mới (strong)
+        // Chữ in đậm cũ (**) => Chữ in đậm mới (strong)
+        desc: `Sử dụng trường điện từ cường độ cao thâm nhập sâu, máy giúp <strong className="!text-[#e41212]">giảm đau thần kinh, kháng viêm cấp tính</strong> và <strong>thúc đẩy quá trình liền xương</strong> nhanh chóng, tối ưu hóa phục hồi chức năng và tái tạo tế bào tổn thương.`,
         image: "/images/service/1.png",
     },
     {
         title: "Công Nghệ Sóng Xung Kích ",
-        desc: "Công nghệ sóng âm năng lượng cao không xâm lấn, hiệu quả đột phá trong việc **phá vỡ các điểm vôi hóa** và **giải tỏa dải cơ co thắt**. Đặc biệt hiệu quả điều trị gai gót chân, viêm gân mạn tính và hội chứng đau điểm kích hoạt.",
+        // Chữ in đậm cũ (**) => Chữ in đậm mới (strong)
+        desc: "Công nghệ sóng âm năng lượng cao không xâm lấn, hiệu quả đột phá trong việc <strong>phá vỡ các điểm vôi hóa</strong> và <strong>giải tỏa dải cơ co thắt</strong>. Đặc biệt hiệu quả điều trị gai gót chân, viêm gân mạn tính và hội chứng đau điểm kích hoạt.",
         image: "/images/service/2.png",
     },
     {
         title: "Máy Siêu Âm Trị Liệu ",
-        desc: "Tạo ra tác động nhiệt sâu và vi massage cấp độ tế bào, giúp **giãn cơ, tăng cường tuần hoàn máu cục bộ**, làm mềm mô sẹo. Giải pháp lý tưởng để giảm viêm sưng và đau cho các vùng khớp gối, vai gáy, và cột sống.",
+        // Chữ in đậm cũ (**) => Chữ in đậm mới (strong)
+        desc: "Tạo ra tác động nhiệt sâu và vi massage cấp độ tế bào, giúp <strong>giãn cơ, tăng cường tuần hoàn máu cục bộ</strong>, làm mềm mô sẹo. Giải pháp lý tưởng để giảm viêm sưng và đau cho các vùng khớp gối, vai gáy, và cột sống.",
         image: "/images/service/3.png",
     },
     {
         title: "Giải Cơ Trị Liệu Chuyên Sâu",
-        desc: "Kỹ thuật giải cơ và ấn huyệt chuyên sâu được thực hiện bởi chuyên viên trị liệu. Giúp **giải tỏa căng thẳng cơ bắp sâu**, khôi phục tính linh hoạt và **tăng cường lưu thông khí huyết**, giảm đau mỏi do sai tư thế, stress.",
+        // Chữ in đậm cũ (**) => Chữ in đậm mới (strong)
+        desc: "Kỹ thuật giải cơ và ấn huyệt chuyên sâu được thực hiện bởi chuyên viên trị liệu. Giúp <strong>giải tỏa căng thẳng cơ bắp sâu</strong>, khôi phục tính linh hoạt và <strong>tăng cường lưu thông khí huyết</strong>, giảm đau mỏi do sai tư thế, stress.",
         image: "/images/service/4.png",
     },
     {
         title: "Phục Hồi Chức Năng Thần Kinh (Sau Đột Quỵ)",
-        desc: "Phác đồ tập luyện cá nhân hóa, kết hợp thiết bị hỗ trợ chuyên biệt, giúp bệnh nhân sau đột quỵ **tái lập các cử động chức năng**, ngăn ngừa teo cơ cứng khớp và **sớm quay trở lại cuộc sống sinh hoạt thường ngày**.",
+        // Chữ in đậm cũ (**) => Chữ in đậm mới (strong)
+        desc: "Phác đồ tập luyện cá nhân hóa, kết hợp thiết bị hỗ trợ chuyên biệt, giúp bệnh nhân sau đột quỵ <strong>tái lập các cử động chức năng</strong>, ngăn ngừa teo cơ cứng khớp và <strong>sớm quay trở lại cuộc sống sinh hoạt thường ngày</strong>.",
         image: "/images/service/5.png",
     },
     {
         title: "Hệ Thống Tập Vận Động Phục Hồi",
-        desc: "Sử dụng các dòng máy tập **vận động chủ động và thụ động** tiên tiến để phục hồi biên độ khớp và sức mạnh cơ bắp. Đây là bước then chốt sau chấn thương, phẫu thuật hoặc để duy trì vận động tối ưu cho người lớn tuổi.",
+        // Chữ in đậm cũ (**) => Chữ in đậm mới (strong)
+        desc: "Sử dụng các dòng máy tập <strong>vận động chủ động và thụ động</strong> tiên tiến để phục hồi biên độ khớp và sức mạnh cơ bắp. Đây là bước then chốt sau chấn thương, phẫu thuật hoặc để duy trì vận động tối ưu cho người lớn tuổi.",
         image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800",
     },
 ];
+// ... (Phần còn lại của ServiceSection không thay đổi)
 
 export const ServiceSection = () => {
     return (
@@ -51,13 +59,12 @@ export const ServiceSection = () => {
                             <span className="text-red-700">VẬT LÝ TRỊ LIỆU BẬC NHẤT</span>
                         </h2>
                         <p className="text-slate-500 max-w-lg">
-                            Chúng tôi trang bị những công nghệ tiên tiến nhất từ Châu Âu và Mỹ để **rút ngắn thời gian phục hồi** và mang lại **hiệu quả điều trị bền vững** cho mọi vấn đề cơ xương khớp.
+                            Chúng tôi trang bị những công nghệ tiên tiến nhất từ Châu Âu và Mỹ để <span className="text-[#e41212] font-bold">rút ngắn thời gian phục hồi</span>  và mang lại <span className="text-[#e41212] font-bold">hiệu quả điều trị bền vững</span> cho mọi vấn đề cơ xương khớp.
                         </p>
                     </div>
 
-                    <button className="group flex items-center gap-2 bg-slate-900 hover:bg-[#e41212] text-white font-bold py-3 px-8 rounded-full transition-all shadow-md shrink-0">
-                        Tìm Hiểu Chi Tiết <MoveRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
+
+                    <Button label="Tìm Hiểu Chi Tiết" variant="secondary" icon={<MoveRight />} className="py-4" />
                 </div>
 
                 <div className="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scroll-smooth 
@@ -85,9 +92,15 @@ export const ServiceSection = () => {
                                 <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#e41212] transition-colors">
                                     {item.title}
                                 </h3>
-                                <p className="text-slate-500 leading-relaxed line-clamp-3 text-base">
-                                    {item.desc}
-                                </p>
+                                {/* NOTE: If you want the HTML inside item.desc to render 
+                                    (i.e., the bold and red text), you MUST use 
+                                    dangerouslySetInnerHTML instead of just {item.desc}. 
+                                    If not, the span tags will be displayed as raw text.
+                                */}
+                                <p
+                                    className="text-slate-500 leading-relaxed line-clamp-3 text-base"
+                                    dangerouslySetInnerHTML={{ __html: item.desc }}
+                                />
                             </div>
                         </div>
                     ))}
